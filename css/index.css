@@ -1,0 +1,161 @@
+/* 首页专属样式补充 */
+
+/* banner 全屏大图模式：去掉旧背景色 */
+.banner_qu {
+    background: transparent;
+    border-bottom: none;
+}
+.banner_qu::before {
+    content: "";
+    position: absolute;
+    left: -30px; top: 80px;
+    width: 260px; height: 260px;
+    background: url('../images/zs1.jpg') no-repeat / contain;
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 2;
+}
+.banner_qu::after {
+    content: "";
+    position: absolute;
+    right: 40px; bottom: 80px;
+    width: 280px; height: 140px;
+    background: url('../images/zs2.jpg') no-repeat right bottom / contain;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* 简介区右下远山水印 */
+.guzhen_jianjie::after {
+    content: "";
+    position: absolute;
+    right: 20px; bottom: 20px;
+    width: 200px; height: 130px;
+    background: url('../images/zs3.jpg') no-repeat / contain;
+    opacity: 0.18;
+    pointer-events: none;
+}
+
+/* 剧本杀区左上梅花 */
+.juben_qu::after {
+    content: "";
+    position: absolute;
+    left: 20px; top: 30px;
+    width: 140px; height: 200px;
+    background: url('../images/zs1.jpg') no-repeat / contain;
+    opacity: 0.18;
+    pointer-events: none;
+}
+
+.juben_huayuan .zhongxin {
+    background: rgba(185, 67, 52, 0.85);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 3px #ede1c8, 0 0 0 4px #b94334;
+}
+
+.banner_pinyin {
+    position: relative;
+    display: inline-block;
+}
+.banner_pinyin::before,
+.banner_pinyin::after {
+    content: "\00b7";
+    margin: 0 12px;
+    color: #8b6f47;
+}
+
+/* ============ 首页区域艺术装饰 ============ */
+
+/* 实景区：右下小船 + 左侧竖排 */
+.shijing_qu::before {
+    content: "";
+    position: absolute;
+    right: 30px; bottom: 30px;
+    width: 220px; height: 110px;
+    background: url('../images/zs4.jpg') no-repeat right bottom / contain;
+    opacity: 0.3;
+    pointer-events: none;
+}
+.shijing_qu::after {
+    content: "古 镇 志";
+    position: absolute;
+    left: 30px; top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    color: #b94334;
+    letter-spacing: 18px;
+    font-size: 24px;
+    opacity: 0.18;
+    pointer-events: none;
+}
+
+/* 文创区：右上大印章 + 左下梅花 */
+.wenchuang_qu { position: relative; overflow: hidden; }
+.wenchuang_qu::before {
+    content: "文";
+    position: absolute;
+    right: 60px; top: 40px;
+    width: 90px; height: 90px;
+    line-height: 90px;
+    text-align: center;
+    background: rgba(185, 67, 52, 0.85);
+    color: #f5e6c8;
+    font-size: 50px;
+    border: 3px solid #f5e6c8;
+    box-shadow: 0 0 0 1px #b94334;
+    transform: rotate(-8deg);
+    opacity: 0.85;
+    pointer-events: none;
+    z-index: 1;
+}
+.wenchuang_qu::after {
+    content: "";
+    position: absolute;
+    left: -40px; bottom: 0;
+    width: 200px; height: 200px;
+    background: url('../images/zs1.jpg') no-repeat / contain;
+    opacity: 0.18;
+    pointer-events: none;
+}
+
+/* 预约区：叠加层装饰 */
+.yuyue_toumingceng::before {
+    content: "驿\00b7约";
+    position: absolute;
+    left: -30px; top: 50%;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    color: #b94334;
+    letter-spacing: 14px;
+    font-size: 22px;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* 登录区：灯笼 + 竖排 */
+.denglu_qu::before {
+    content: "";
+    position: absolute;
+    right: 40px; bottom: 40px;
+    width: 160px; height: 240px;
+    background: url('../images/zs5.jpg') no-repeat / contain;
+    opacity: 0.3;
+    pointer-events: none;
+}
+.denglu_qu::after {
+    content: "今 夜 灯 火";
+    position: absolute;
+    left: 40px; top: 80px;
+    writing-mode: vertical-rl;
+    color: #b94334;
+    letter-spacing: 18px;
+    font-size: 22px;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+/* 区块间自然过渡（依靠 tonglan_jing + 交替底色区分区块） */
+
+/* banner 主标题层级 */
+.banner_qu .banner_biaoti { position: relative; z-index: 2; }

@@ -1,0 +1,235 @@
+/* 剧本杀页样式 */
+.js_yindao {
+    text-align: center;
+    font-size: 17px;
+    color: #6b5232;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    padding: 14px 0;
+    border-top: 1px dashed #8b6f47;
+    border-bottom: 1px dashed #8b6f47;
+}
+
+.js_kapian {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.js_ka {
+    display: flex;
+    background: rgba(245, 233, 208, 0.6);
+    border: 1px solid #8b6f47;
+    overflow: hidden;
+    min-height: 220px;
+}
+
+.js_ka:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.js_xuhao {
+    width: 200px;
+    flex-shrink: 0;
+    background: #b94334;
+    color: #f5e6c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    font-family: "KaiTi", "STKaiti", serif;
+    letter-spacing: 0;
+}
+
+.js_zhubti {
+    flex: 1;
+    padding: 30px 36px;
+}
+
+.js_zhubti h3 {
+    font-size: 26px;
+    color: #3a2818;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #8b6f47;
+    padding-bottom: 10px;
+    font-weight: normal;
+}
+
+.js_duibai {
+    color: #b94334;
+    font-style: italic;
+    margin-bottom: 14px;
+    line-height: 1.9;
+    padding-left: 14px;
+    border-left: 2px solid #b94334;
+}
+
+.js_zhubti p {
+    color: #4a3320;
+    line-height: 1.9;
+    margin-bottom: 10px;
+}
+
+.js_anniu {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 8px 30px;
+    border: 1px solid #b94334;
+    color: #b94334;
+    letter-spacing: 4px;
+    transition: all 0.3s;
+}
+
+.js_anniu:hover {
+    background: #b94334;
+    color: #f5e6c8;
+}
+
+@media (max-width: 768px) {
+    .js_ka, .js_ka:nth-child(even) { flex-direction: column; }
+    .js_xuhao { width: 100%; min-height: 100px; font-size: 60px; }
+}
+
+/* 南瓜案页 */
+.ng_yindao {
+    text-align: center;
+    margin: 40px 0;
+}
+.ng_yindao h2 {
+    font-size: 36px;
+    color: #b94334;
+    letter-spacing: 12px;
+    margin-bottom: 14px;
+    font-weight: normal;
+}
+.ng_yindao p {
+    font-size: 16px;
+    color: #5a3a1a;
+    line-height: 2;
+    letter-spacing: 2px;
+}
+
+.ng_dianjin {
+    background: rgba(245, 233, 208, 0.6);
+    border: 1px solid #8b6f47;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.ng_shipin {
+    width: 100%;
+    height: 380px;
+    background: #2a1810;
+    color: #f5e6c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 14px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.ng_shipin::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('../images/jbs2.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+}
+
+.ng_shipin .bofang {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #f5e6c8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.ng_shipin .bofang::after {
+    content: "";
+    border-left: 18px solid #f5e6c8;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    margin-left: 6px;
+}
+
+.ng_shipin .biaoti {
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+    letter-spacing: 6px;
+}
+
+.ng_pinglun {
+    margin-top: 30px;
+    background: rgba(245, 233, 208, 0.6);
+    border: 1px solid #8b6f47;
+    padding: 26px 30px;
+}
+
+.ng_pinglun h3 {
+    font-size: 20px;
+    color: #b94334;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+    font-weight: normal;
+    border-bottom: 1px dashed #8b6f47;
+    padding-bottom: 10px;
+}
+
+.ng_shuru {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.ng_shuru .pinglun_ipt {
+    flex: 1;
+    border: 1px solid #8b6f47;
+    background: #fff8e8;
+    padding: 10px 14px;
+    font-family: inherit;
+    color: #3a2818;
+    outline: none;
+}
+
+.ng_shuru .pinglun_btn {
+    background: #b94334;
+    color: #f5e6c8;
+    border: none;
+    padding: 10px 26px;
+    letter-spacing: 4px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.ng_shuru .pinglun_btn:hover { background: #3a2818; }
+
+.pinglun_liebiao {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pinglun_liebiao li {
+    display: grid;
+    grid-template-columns: 100px 1fr 60px;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px dashed rgba(139, 111, 71, 0.4);
+    font-size: 14px;
+}
+
+.pinglun_liebiao .plyhu { color: #b94334; }
+.pinglun_liebiao .plnr { color: #3a2818; }
+.pinglun_liebiao .plsj { color: #8b6f47; text-align: right; }
