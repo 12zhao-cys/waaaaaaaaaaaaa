@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>预约服务 - 走马古镇</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/yuyue.css">
+</head>
+<body>
+
+<header class="dh_top">
+    <div class="dh_logo">Personal Portfolio</div>
+    <ul class="dh_menu">
+        <li><a href="../index.html">古镇简介</a></li>
+        <li><a href="jubensha.html">线上剧本杀入口</a></li>
+        <li><a href="jianjie.html">古镇所览</a></li>
+        <li><a href="wenchuang.html">文创购买</a></li>
+        <li class="cur"><a href="yuyue.html">预约服务</a></li>
+        <li><a href="login.html">登录</a></li>
+    </ul>
+    <div class="dh_search">
+        <input type="text" placeholder="搜索古镇信息">
+        <button type="button">搜</button>
+    </div>
+</header>
+
+<section class="zi_banner">
+    <img src="../images/yy1.jpg" alt="走马古镇团队拓展研学场地 电脑壁纸">
+    <div class="zi_banner_wenzi">
+        <h1>预约服务</h1>
+        <p>Reservation</p>
+    </div>
+</section>
+
+<div class="zi_baoguo">
+
+    <ul class="yy_qiehuan">
+        <li class="cur" data-mu="tuandui">团队预约</li>
+        <li data-mu="geren">个人预约</li>
+    </ul>
+
+    <div class="yy_zhutibox" id="tuandui" style="display:flex;">
+        <div class="yy_jieshao">
+            <h3>团队预约</h3>
+            <p class="yy_fubi">10人以上场地租赁</p>
+            <ul class="yy_dian">
+                <li>古镇专属研学课堂，含非遗手作体验</li>
+                <li>定制走马驿道剧本杀团建</li>
+                <li>大型团体讲解员陪同导览</li>
+                <li>可预订古镇老茶馆专场说书</li>
+            </ul>
+            <div class="yy_tu_da"><img src="../images/yy2.jpg" alt="团队预约古镇活动场地"></div>
+        </div>
+        <form class="yuyue_form yy_biaodan" action="javascript:void(0);">
+            <h4>填写团队预约信息</h4>
+            <div class="yy_zu">
+                <label>团队名称</label>
+                <input type="text" placeholder="如：某高校历史社">
+            </div>
+            <div class="yy_zu">
+                <label>联系人</label>
+                <input type="text" placeholder="负责人姓名">
+            </div>
+            <div class="yy_zu">
+                <label>联系方式</label>
+                <input type="text" placeholder="手机号码">
+            </div>
+            <div class="yy_zu">
+                <label>预计人数</label>
+                <input type="number" placeholder="人数（不少于10人）">
+            </div>
+            <div class="yy_zu">
+                <label>预约日期</label>
+                <input type="date">
+            </div>
+            <div class="yy_zu">
+                <label>预约项目</label>
+                <select>
+                    <option>古镇研学</option>
+                    <option>剧本杀团建</option>
+                    <option>非遗手作体验</option>
+                    <option>说书茶会专场</option>
+                </select>
+            </div>
+            <div class="yy_zu">
+                <label>备注</label>
+                <textarea rows="3" placeholder="特殊需求"></textarea>
+            </div>
+            <button type="submit" class="yy_tijiao">提交预约</button>
+        </form>
+    </div>
+
+    <div class="yy_zhutibox" id="geren" style="display:none;">
+        <div class="yy_jieshao">
+            <h3>个人预约</h3>
+            <p class="yy_fubi">个性化服务定制</p>
+            <ul class="yy_dian">
+                <li>一对一古镇深度导览</li>
+                <li>个性化路线推荐与拍照点位</li>
+                <li>预约非遗匠人体验课</li>
+                <li>古风换装与摄影服务</li>
+            </ul>
+            <div class="yy_tu_da"><img src="../images/yy3.jpg" alt="个人游客漫步古镇石板街"></div>
+        </div>
+        <form class="yuyue_form yy_biaodan" action="javascript:void(0);">
+            <h4>填写个人预约信息</h4>
+            <div class="yy_zu">
+                <label>姓 名</label>
+                <input type="text" placeholder="您的姓名">
+            </div>
+            <div class="yy_zu">
+                <label>联系方式</label>
+                <input type="text" placeholder="手机号码">
+            </div>
+            <div class="yy_zu">
+                <label>预约日期</label>
+                <input type="date">
+            </div>
+            <div class="yy_zu">
+                <label>预约项目</label>
+                <select>
+                    <option>深度导览</option>
+                    <option>古风换装拍摄</option>
+                    <option>非遗体验课</option>
+                    <option>剧本杀单人体验</option>
+                </select>
+            </div>
+            <div class="yy_zu">
+                <label>备注</label>
+                <textarea rows="3" placeholder="个性化需求"></textarea>
+            </div>
+            <button type="submit" class="yy_tijiao">提交预约</button>
+        </form>
+    </div>
+
+</div>
+
+<footer class="ye_jiao">
+    走马古镇 | 2026
+</footer>
+
+<script src="../js/main.js"></script>
+<script>
+document.querySelectorAll('.yy_qiehuan li').forEach(function(li){
+    li.addEventListener('click', function(){
+        document.querySelectorAll('.yy_qiehuan li').forEach(function(l){l.classList.remove('cur');});
+        this.classList.add('cur');
+        var mu = this.getAttribute('data-mu');
+        document.querySelectorAll('.yy_zhutibox').forEach(function(b){b.style.display='none';});
+        document.getElementById(mu).style.display='flex';
+    });
+});
+if (location.hash) {
+    var li = document.querySelector('.yy_qiehuan li[data-mu="' + location.hash.replace('#','') + '"]');
+    if (li) li.click();
+}
+</script>
+</body>
+</html>
